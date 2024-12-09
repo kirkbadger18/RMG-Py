@@ -373,12 +373,12 @@ class MoleculeDrawer(object):
             return self.coordinates
 
         # Decide whether we can use RDKit or have to generate coordinates ourselves
-        for atom in self.molecule.atoms:
-            if atom.charge != 0:
-                use_rdkit = False
-                break
-        else:  # didn't break
-            use_rdkit = True
+        #for atom in self.molecule.atoms:
+            #if atom.charge != 0:
+            #    use_rdkit = False
+            #    break
+            #else:  # didn't break
+        use_rdkit = True
 
         if not use_rdkit:
             if len(self.cycles) > 0:
